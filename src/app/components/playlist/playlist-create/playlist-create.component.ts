@@ -27,7 +27,9 @@ createForm(){
 }
 
 onSubmit(){
+  console.log(this.playlistForm.value);
   this._playlistService.createPlaylist(this.playlistForm.value).subscribe(data => {
+    console.log(data);
     this._router.navigate(['/playlist']);
   });
 }

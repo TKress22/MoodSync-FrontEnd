@@ -29,14 +29,14 @@ export class SongDetailsComponent implements OnInit {
     event.preventDefault();
     console.log(" add called");
     this.songList.push(id);
-    (<HTMLInputElement>document.getElementById("SongList")).value = this.convertToText(this.songList);
+    (<HTMLInputElement>document.getElementById("songlisttxt")).value = this.convertToText(this.songList);
   }
 
   deleteFromList(id: number){
     event.preventDefault();
     console.log(" del called");
     this.songList = this.removeItem(this.songList, id);
-    (<HTMLInputElement>document.getElementById("SongList")).value = this.convertToText(this.songList);
+    (<HTMLInputElement>document.getElementById("songlisttxt")).value = this.convertToText(this.songList);
   }
 
   convertToText(list: number[]){
